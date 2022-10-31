@@ -118,9 +118,26 @@ img {
   height: 100vh;
   object-fit: cover;
   mix-blend-mode: soft-light;
+  opacity: .5;
 }
-
-
+ .shape__small,
+ .shape__big{
+    position: absolute;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    filter: blur(96px);
+    z-index: -1;
+ }
+.shape__small{
+ width: 150px;
+ height: 150px;
+}
+.shape__big{
+    width: 250px;
+    height: 150px;
+    opacity: 0.8;
+}
+ 
 .shape__bg {
   position: fixed;
   width: 100%;
@@ -242,6 +259,11 @@ color: var(--white-color);
 
 /* Change background header */
 
+.bg-header{
+   background-color: var(--body-color) ;
+   box-shadow: 0 4px 8px hsla(22, 10%, 2% , .4 );
+}
+
 
 /* Active link */
 
@@ -338,6 +360,15 @@ margin-bottom: 2.5rem;
   }
 }
 
+.home .shape__small {
+  top:  -3rem;
+  left: -3rem;
+}
+
+.home .shape__big{
+  bottom: 5rem;
+  right: -10rem;
+}
 
 /*=============== BUTTON ===============*/
 .button
@@ -356,8 +387,33 @@ transition: background .3s color .3s;
 
 }
 /*=============== CATEGORY ===============*/
+ .category {
+   position: relative;
 
-
+ }
+.category__container{
+  padding-top: 4rem;
+  grid-template-columns: 228px;
+  justify-content: center;
+  row-gap: 6rem;
+}
+.category__card{
+  position: relative;
+  background-color: var(--container-color);
+  border-radius:  2rem ;
+  padding:  4.5rem 2.25rem 2rem ;
+  box-shadow: 0 4px 16px  hsla(22 ,10% , 2% , .3);
+  text-align: center;
+  transition: background .3s;
+}
+.category__img {
+  width: 120px;
+  position: absolute;
+  inset: 0;
+  margin: 0 auto ;
+  top: -3.5rem;
+  transition:  transform .3s;
+}
 /*=============== ABOUT ===============*/
 
 
